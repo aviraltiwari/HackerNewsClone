@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --navbar: #0E1217;
+    --text: #ffffff;
+    --font-family: 'Inter', sans-serif;
+    --gradient: linear-gradient(to right, #355070, #e56b6f);
+    --bg-col: #030405;
+    --bg-grad: linear-gradient(to right, #19232b, #221010);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 10vh;
+    /* padding-bottom: 5vh; */
+    font-family: var(--font-family);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: var(--navbar);
+    color: var(--text);
+    font-weight: bolder;
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+}
+
+.header .title {
+    font-size: 1.5rem;
+    margin-left: 5rem;
+}
+
+.header ul li {
+    margin-right: 40px;
+}
+
+.header .search-bar {
+    position: relative;
+    display: flex;
+}
+
+.header .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff44;
+    color: var(--text);
+    font-size: 1.2rem;
+    margin-right: 10px;
+    padding-left: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header .search:focus {
+    background-color: #868686;
+    outline: none;
+    border: #d4d4d4 solid 1px;
+    border-radius: 5px;
+    /* box-shadow: rgb(255, 255, 255) 0px 0px 5px; */
+    width: 32rem;
+}
+
+.header .search-button {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff00;
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+.footer {
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    background-color: var(--navbar);
+    color: var(--text);
+    font-size: 0.5rem;
+}
+
+.container {
+    /* background-image: var(--gradient); */
+    /* background-color: var(--bg-col); */
+    background-image: var(--bg-grad);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container .heading {
+    margin-top: 5vh;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--text);
+    text-align: center;
+}
+
+.container .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+
+}
+
+
+.container .card-container .card {
+    border: #0E1217;
+    max-width: 40vh;
+    min-width: 40vh;
+    max-height: 25vh;
+    min-height: 25vh;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 10px;
+    background-color: var(--navbar);
+    color: var(--text);
+    transition: all 0.3s ease-in-out;
+}
+
+.container .card-container .card:hover {
+    background-color: #1b232e;
+    color: var(--text);
+    box-shadow: #1b232e 0px 0px 10px;
+    cursor: pointer;
+}
+
+.container .card-container .card .card-title {
+    font-size: 1rem;
+    font-weight: bolder;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container .card-container .card .card-footer {
+    padding: 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.loading {
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+    animation: loading 2s infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+        color: var(--navbar);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        margin-top: 6vh;
+    }
+
+    .header {
+        display: block;
+        height: fit-content;
+        padding: 20px;
+    }
+
+    .header .title {
+        text-align: center;
+        margin: 0;
+    }
+
+    .header .search-bar {
+        margin: 10px;
+    }
+
+    .header .search {
+        margin: 5px;
+        width: 100%;
+    }
+
+    .header .search:focus {
+        background-color: #868686;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .header ul {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .header ul li {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        margin-inline-end: 10px;
+    }
+
+    .container .card-container .card {
+        max-height: fit-content;
+        max-width: 50vh;
+        min-width: 0;
+    }
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: var(--text);
+}
