@@ -39,7 +39,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'HackerPews || Hacker News Clone',
+            title: 'HackerPews Hacker News Clone',
             template: './src/templates/index.html',
             filename: './index.html',
             inject: 'head',
