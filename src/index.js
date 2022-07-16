@@ -1,4 +1,3 @@
-require('file-loader?name=[name].[ext]!./templates/index.html')
 import css from './assets/css/style.css'
 import React from "react";
 import ReactDOM from "react-dom/client";

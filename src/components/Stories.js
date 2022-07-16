@@ -1,7 +1,7 @@
 import React from "react";
 import Cards from "./static_components/Cards";
 
-const TopStories = ({ type, loading, posts }) => {
+const Stories = ({ type, loading, posts }) => {
     return (
         <>
             <h1 className="heading">{type} Stories</h1>
@@ -17,4 +17,4 @@ const TopStories = ({ type, loading, posts }) => {
     )
 }
 
-export default TopStories;
+export default Stories;

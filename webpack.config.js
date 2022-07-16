@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     output: {
@@ -35,5 +36,15 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'HackerPews || Hacker News Clone',
+            template: './src/templates/index.html',
+            filename: './index.html',
+            inject: 'head',
+            scriptLoading: 'defer',
+            favicon: './src/assets/images/favicon.png'
+        })
+    ]
 }

@@ -12,13 +12,12 @@
 body {
     margin: 0;
     padding: 0;
-    padding-top: 10vh;
     /* padding-bottom: 5vh; */
     font-family: var(--font-family);
 }
 
 .header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -111,6 +110,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
+    min-height: 100%;
 }
 
 .container .heading {
@@ -188,9 +188,6 @@ body {
 
 
 @media screen and (max-width: 768px) {
-    body {
-        margin-top: 6vh;
-    }
 
     .header {
         display: block;

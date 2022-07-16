@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
     return (
         <div className="header">
-            <div className="title">HackerPews</div>
+            <div className="title">HP</div>
             <div className="search-bar">
                 <input className="search" placeholder="Search" />
                 <button className="search-button">Enter to search</button>
